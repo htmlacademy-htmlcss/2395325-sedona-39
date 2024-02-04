@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона: Гостиницы</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="index.html">
+        <img src="#" alt="Логотип">
+      </a>
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">Избранное</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="button" href="#">Хочу сюда!</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-inner">
+      <header class="inner-header">
+        <h1 class="inner-header-title">Гостиницы Седоны</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="index.html">
+              <span class="visually-hidden">Главная</span>
+            </a>
+          </li>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Гостиницы</a>
+          </li>
+        </ul>
+      </header>
+
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтрация поиска</h2>
+        <form class="filter-options" action="https://echo.htmlacademy.ru/" method="post">
+
+          <fieldset class="filter-options-group">
+            <legend class="filer-options-title">Инфраструктура:</legend>
+            <ul class="filter-options-list">
+              <li class="filter-options-item">
+                <input type="checkbox" name="swimming-pool" id="swimming-pool" checked>
+                <label for="swimming-pool">Бассейн</label>
+              </li>
+              <li class="filter-options-item">
+                <input type="checkbox" name="parking" id="parking" checked>
+                <label for="parking">Парковка</label>
+              </li>
+              <li class="filter-options-item">
+                <input type="checkbox" name="wi-fi" id="wi-fi">
+                <label for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="filter-options-group">
+            <legend class="filer-options-title">Тип Жилья:</legend>
+            <ul class="filter-options-list">
+              <li class="filter-options-item">
+                <label>
+                  <input type="radio" name="type-of-housing" value="hotel" checked>
+                  Гостиница</label>
+              </li>
+              <li class="filter-options-item">
+                <label>
+                  <input type="radio" name="type-of-housing" value="motel">
+                  Мотель</label>
+              </li>
+              <li class="filter-options-item">
+                <label>
+                  <input type="radio" name="type-of-housing" value="apartment">
+                  Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!--Верстку подобных фильтров в скринкасте опустили, оставили "на потом". Я тоже пока оставлю :)-->
+          <fieldset class="filter-options-group">
+            <legend class="filer-options-title">Стоимость, ₽:</legend>
+            <div>Фильтр по цене</div>
+          </fieldset>
+
+          <!--Почитала некоторые материалы и пока не сильно поняла, чем отличается input от button-->
+          <button class="button button-blue" type="submit">Применить</button>
+          <button class="button button-empty" type="reset">Сбросить</button>
+        </form>
+      </section>
+
+      <section class="search-results">
+        <!--Вообще количество элементов выборки в теории может меняться, но я пока не знаю, как этот момент обыграть-->
+        <h2 class="search-results-quantity">Найдено гостиниц: 38</h2>
+        <select aria-label="Сортировка">
+          <option value="cheap">Сначала дешёвые</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="popular">Сначала популярные</option>
+        </select>
+        <a href="#" class="button-view button-view-current">
+          <span class="visually-hidden">Показать карточки</span>
+        </a>
+        <a href="#" class="button-view button-view">
+          <span class="visually-hidden">Показать крупные карточки</span> <!--Или это не крупные карточки? :D-->
+        </a>
+        <a href="#" class="button-view button-view">
+          <span class="visually-hidden">Показать список</span>
+        </a>
+
+        <ul class="hotel-list">
+          <li class="hotel-card">
+            <img class="hotel-card-image" src="#" alt="Пейзаж со звездным небом"> <!--Странно, что не фото отеля-->
+            <h3 class="hotel-card-name">Amara Resort & Spa</h3>
+            <p class="hotel-card-description">Гостиница</p>
+            <p class="hotel-card-price">От 4000 ₽</p>
+            <a class="hotel-card-button button" href="#">Подробнее</a>
+
+            <!--Использовать input вместо button? Завернуть в form?
+            Тип button использовала, потому что пока не понимаю, какой лучше выбрать.
+            Почему не ссылка, а кнопка? Ну, потому что вряд ли нажатие перенесет на другую страницу.-->
+            <button class="button button-blue" type="button">В Избранное</button>
+
+            <!--Звездочки. В этих ваших интернетах по-разному их реализуют. Мы еще "маленькие", обойдемся img и потом пофиксим-->
+            <img class="rating-stars" src="#" alt="4 звезды">
+            <p class="rating-text">Рейтинг: 8,5</p>
+          </li>
+          <li class="hotel-card">
+            <img class="hotel-card-image" src="#" alt="Скалы на фоне неба с радугой">
+            <h3 class="hotel-card-name">Villas at Poco Diablo</h3>
+            <p class="hotel-card-description">Гостиница</p>
+            <p class="hotel-card-price">От 5000 ₽</p>
+            <a class="hotel-card-button button" href="#">Подробнее</a>
+            <!--А что будет здесь? Обычно можно повторно нажать на кнопку и таким образом убрать из Избранного-->
+            <button class="button button-green" type="button">В Избранном</button>
+            <img class="rating-stars" src="#" alt="4 звезды">
+            <p class="rating-text">Рейтинг: 9,2</p>
+          </li>
+          <li class="hotel-card">
+            <img class="hotel-card-image" src="#" alt="Горный пейзаж в солнечный день">
+            <h3 class="hotel-card-name">Desert Quail Inn</h3>
+            <p class="hotel-card-description">Гостиница</p>
+            <p class="hotel-card-price">От 2500 ₽</p>
+            <a class="hotel-card-button button" href="#">Подробнее</a>
+            <button class="button button-blue" type="button">В Избранное</button>
+            <img class="rating-stars" src="#" alt="3 звезды">
+            <p class="rating-text">Рейтинг: 6,9</p>
+          </li>
+          <li class="hotel-card">
+            <img class="hotel-card-image" src="#" alt="Ночной горный пейзаж в оранжевых тонах">
+            <h3 class="hotel-card-name">GreenTree Inn</h3>
+            <p class="hotel-card-description">Гостиница</p>
+            <p class="hotel-card-price">От 1500 ₽</p>
+            <a class="hotel-card-button button" href="#">Подробнее</a>
+            <button class="button button-blue" type="button">В Избранное</button>
+            <img class="rating-stars" src="#" alt="2 звезды">
+            <p class="rating-text">Рейтинг: 5,0</p>
+          </li>
+        </ul>
+
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <!--А вот тут я не уверена в поведении элемента-->
+          <li class="pagination-item">
+            <a class="pagination-link pagination-more" href="#">...</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
+      </section>
+
+      <!--Прописываю этому блоку дополнительный класс, поскольку его "начинка" повторяется в аналогичном блоке на главной,
+      а оформление меняется-->
+      <section class="subscription subscription-inner">
+        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
+        <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="email" name="e-mail" placeholder="Ваш e-mail" required>
+          <button class="button button-blue" type="submit">Подписаться</button>
+        </form>
+      </section>
+
+      <footer class="main-footer">
+        <section class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social">
+            <li class="social-item">
+              <a class="social-button" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">VK</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-button" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Telegram</span>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контактный телефон</h2>
+          <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </section>
+
+        <a href="https://htmlacademy.ru/">
+          <img src="#" alt="Логотип HTML Academy">
+        </a>
+      </footer>
+
+    </main>
+  </body>
+</html>

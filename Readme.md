@@ -2,6 +2,7 @@
 
 * Студент: [Мария Галай](https://up.htmlacademy.ru/htmlcss/39/user/2395325).
 * Наставник: [Карина Королева](https://htmlacademy.ru/profile/id1526731).
+* Ссылка на проект: [Седона](https://m-lynn-r.github.io/2395325-sedona-39/).
 
 ---
 
