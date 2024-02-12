@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Седона: Главная</title>
+    <link rel="stylesheet" href="styles/styles.css"
   </head>
+
   <body>
     <header class="main-header">
 
@@ -42,10 +44,9 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-index">
       <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-      <!--Это, скорее, декоративное изображение, и мы должны подключить его позже стилями. Оно здесь пока только для красоты-->
-      <img src="images/sedona-hero.png" width="1200" height="485" alt="Горный пейзаж Седоны">
+      <img class="index-hero" src="images/welcome-to-sedona.svg" width="458" height="352" alt="Горный пейзаж Седоны">
 
       <section class="advantages">
         <h2 class="visually-hidden">Почему стоит посетить Седону?</h2>
@@ -114,7 +115,6 @@
       <section class="subscription">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="e-mail" placeholder="Ваш e-mail" required>
           <button class="button button-blue" type="submit">Подписаться</button>
