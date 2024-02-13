@@ -54,6 +54,7 @@ body {
   background-size: 1200px 485px;
   background-repeat: no-repeat;
   text-align: center;
+  background-position: top, center;
 }
 
 .section-heading-title {
@@ -96,9 +97,120 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+/*Перенести бэк-имг в другой класс*/
 .subscription {
+  background-color: #82B3D3;
+  color: #ffffff;
   background-image: url(../images/subscribe-background.jpg);
   background-size: 1200px 415px;
   background-repeat: no-repeat;
-  height: 415px;
+  height: 415px; /* Без этого параметра фоновое изображение урезается по высоте*/
+  background-position: center;
+}
+
+.subscription-email {
+  width: 452px;
+  height: 52px;
+  background-color: #f2f2f2;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-phone {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.catalog-header-block {
+  background-color: #82B3D3;
+  color: #ffffff;
+  background-image: url(../images/filters-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catalog-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+.breadcrumbs {
+  color: #ffffff;
+}
+
+.breadcrumbs-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-options-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.filters-options-item {
+  font-size: 18px;
+  line-height: 23px; /*не работает: задать через класс инпута или лейбл*/
+}
+
+.search-results-quantity, .quantity {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.sort-results {
+  color: #333333;
+}
+
+.hotel-card-name {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.rating-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.pagination-item {
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.pagination-current {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-more {
+  background-color: transparent;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pagination-link-current, .pagination-link-more {
+  color: #000000;
 }
