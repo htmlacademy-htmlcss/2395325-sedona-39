@@ -202,7 +202,8 @@ input, button, select {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  margin: 40px 70px 30px;
+  align-items: center;
+  height: 120px;
 }
 
 .footer-socials {
@@ -333,10 +334,6 @@ input, button, select {
 
 .view-button-current {
   border-color: #000000;
-}
-
-.hotel-list {
-
 }
 
 .hotel-card {
