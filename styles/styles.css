@@ -206,6 +206,10 @@ input, button, select {
   margin: 0;
 }
 
+.advantages-picture-last {
+  order: -1
+}
+
 .recommendations-heading {
   margin: 64px auto;
 }
@@ -338,14 +342,21 @@ input, button, select {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
   color: #ffffff;
+  list-style: none;
 }
 
 .breadcrumbs-link {
+  display: block;
+  margin: 0 28px 0 0;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
+  min-width: 13px;
 }
 
 .filter-options {
@@ -395,6 +406,8 @@ input, button, select {
 
 .search-results-header {
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .search-results-quantity {
@@ -402,7 +415,7 @@ input, button, select {
   line-height: 36px;
   font-weight: 700;
   text-align: left;
-  margin-right: 200px;
+  margin: 0 200px 0 0;
 }
 
 .sort-results {
@@ -425,8 +438,16 @@ input, button, select {
   border-radius: 4px;
 }
 
+.view-button:not(:last-child) {
+  margin-right: 8px;
+}
+
 .view-button-current {
   border-color: #000000;
+}
+
+.hotel-list {
+  margin-bottom: 40px;
 }
 
 .hotel-card {
@@ -451,18 +472,32 @@ input, button, select {
 }
 
 .pagination {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  max-width: 1060px;
 }
 
-.pagination-item {
+.advantages-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
   width: 60px;
   height: 60px;
   color: #ffffff;
   background-color: #82B3D3;
-  text-align: center;
   border-radius: 4px;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.pagination-link:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-current {
@@ -472,13 +507,13 @@ input, button, select {
 
 .pagination-more {
   background-color: transparent;
-}
-
-.pagination-link {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.pagination-link-current, .pagination-link-more {
   color: #000000;
+}
+
+.subscription-heading {
+  margin: 96px auto 104px;
+}
+
+.subscription-form {
+  margin-top: 54px;
 }
