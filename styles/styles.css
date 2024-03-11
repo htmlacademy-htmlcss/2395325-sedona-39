@@ -14,6 +14,20 @@
   font-display: swap;
 }
 
+:root {
+  --text-color-basic: rgba(0, 0, 0, 1);
+  --text-color-second: rgba(51, 51, 51, 1);
+  --text-color-error: rgba(255, 87, 87, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-light-grey: rgba(242, 242, 242, 1);
+  --color-grey: rgba(229, 229, 229, 1);
+  --color-blue-basic: rgba(130, 179, 211, 1);
+  --color-blue-second-12: rgba(131, 179, 211, 0.12);
+  --color-blue-second-20: rgba(131, 179, 211, 0.2);
+  --button-color-basic: rgba(117, 97, 87, 1);
+  --button-color-green: rgba(125, 181, 79, 1);
+}
+
 html {
   height: 100%;
 }
@@ -27,8 +41,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: var(--color-light-grey);
+  color: var(--text-color-basic);
   text-align: center;
 }
 
@@ -37,7 +51,8 @@ input, button, select {
 }
 
 .page-container {
-  background-color: #ffffff;
+  background-color: var(--color-white);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 1200px;
   margin: 0 auto;
 }
@@ -54,8 +69,11 @@ input, button, select {
 }
 
 .button {
-  background-color: #756157;
-  color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--button-color-basic);
+  color: var(--color-white);
+  border: none;
   border-radius: 4px;
   padding: 8px 50px;
   font-size: 16px;
@@ -65,12 +83,28 @@ input, button, select {
   text-decoration: none;
 }
 
+.button-card {
+  display: inline-block;
+  background-color: var(--button-color-basic);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 140px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .button-blue {
-  background-color: #82B3D3;
+  background-color: var(--color-blue-basic);
 }
 
 .button-green {
-  background-color: #7DB54F;
+  background-color: var(--button-color-green);
 }
 
 .button-transparent {
@@ -81,20 +115,6 @@ input, button, select {
 .button-big {
   font-size: 20px;
   line-height: 36px;
-}
-
-.button-card {
-  display: block;
-  background-color: #756157;
-  color: #ffffff;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  width: 140px;
-  padding: 8px auto;
 }
 
 .list {
@@ -125,22 +145,44 @@ input, button, select {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color:#000000;
-  background-color: #ffffff;
+  color:var(--text-color-basic);
+  background-color: var(--color-white);
   text-align: center;
   text-decoration: none;
 }
 
-.navigation-icon {
+.navigation-link-current::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--button-color-basic);
+}
+
+.navigation-link-user {
+  position: relative;
   display: block;
   min-height: 20px;
   min-width: 20px;
   padding: 22px 12px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: var(--text-color-basic);
 }
 
 .navigation-button {
@@ -171,6 +213,7 @@ input, button, select {
 }
 
 .section-heading-text {
+  color: var(--text-color-second);
   font-size: 22px;
   line-height: 26px;
   margin: 0;
@@ -195,18 +238,18 @@ input, button, select {
 
 .advantages-item:first-child,
 .advantages-item:last-child {
-  background-color: #82B3D3;
-  color: #ffffff;
+  background-color: var(--color-blue-basic);
+  color: var(--color-white);
   width: 1200px;
 }
 
 .advantages-item:nth-child(2),
 .advantages-item:nth-child(4) {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: var(--color-blue-second-12);
 }
 
 .advantages-item:nth-child(3) {
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: var(--color-blue-second-20);
 }
 
 .advantages-text {
@@ -219,11 +262,30 @@ input, button, select {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto 30px;
+}
+
+.divider {
+  display: block;
+  box-sizing: border-box;
+  width: 60px;
+  margin: auto;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item:first-child .divider,
+.advantages-item:last-child .divider {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-description {
-  margin: 0;
+  margin: 30px auto auto;
+}
+
+.advantages-item:nth-child(2) .advantages-description,
+.advantages-item:nth-child(3) .advantages-description,
+.advantages-item:nth-child(4) .advantages-description {
+  color: var(--text-color-second);
 }
 
 .advantages-picture-last {
@@ -242,10 +304,24 @@ input, button, select {
 .recommendations-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 400px;
   min-height: 385px;
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: 50% 81px;
+}
+
+.recommendations-item:nth-child(1) {
+  background-image: url(../images/house.svg);
+}
+
+.recommendations-item:nth-child(2) {
+  background-image: url(../images/burger.svg);
+}
+
+.recommendations-item:nth-child(3) {
+  background-image: url(../images/gift.svg);
 }
 
 .recommendations-title {
@@ -255,18 +331,18 @@ input, button, select {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin: 183px auto 30px;
 }
 
 .recommendations-description {
-  display: block;
   width: 230px;
+  color: var(--text-color-second);
   margin: 0;
 }
 
 .recommendations-item:first-child,
 .recommendations-item:last-child {
-  background-color: rgba(131, 179, 211, 0.12);
+  background-color: var(--color-blue-second-12);
 }
 
 .search-heading {
@@ -287,9 +363,13 @@ input, button, select {
   margin: 96px auto 54px;
 }
 
+.subscription-background .section-heading-text {
+  color: var(--color-white);
+}
+
 .subscription-background {
-  background-color: #82B3D3;
-  color: #ffffff;
+  background-color: var(--color-blue-basic);
+  color: var(--color-white);
   background-image: url(../images/subscribe-background.jpg);
   background-size: 1200px 415px;
   background-repeat: no-repeat;
@@ -299,7 +379,7 @@ input, button, select {
 .subscription-email {
   width: 452px;
   height: 52px;
-  background-color: #f2f2f2;
+  background-color: var(--color-light-grey);
   font-size: 18px;
   line-height: 24px;
 }
@@ -319,8 +399,19 @@ input, button, select {
 }
 
 .footer-socials-link {
+  position: relative;
   display: block;
-  min-width: 48px;
+  width: 48px;
+}
+
+.socials-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: var(--color-blue-basic);
 }
 
 .footer-phone {
@@ -328,7 +419,7 @@ input, button, select {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
-  color: #000000;
+  color: var(--text-color-basic);
   width: 720px;
 }
 
@@ -337,8 +428,8 @@ input, button, select {
 }
 
 .catalog-header-block {
-  background-color: #82B3D3;
-  color: #ffffff;
+  background-color: var(--color-blue-basic);
+  color: var(--color-white);
   background-image: url(../images/filters-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -365,14 +456,14 @@ input, button, select {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  color: #ffffff;
+  color: var(--color-white);
   list-style: none;
 }
 
 .breadcrumbs-link {
   display: block;
   margin: 0 28px 0 0;
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
@@ -420,7 +511,7 @@ input, button, select {
 .search-results {
   display: flex;
   flex-direction: column;
-  margin: 50px auto 40px;
+  margin: 50px auto 0;
   width: 1060px;
 }
 
@@ -439,7 +530,7 @@ input, button, select {
 }
 
 .sort-results {
-  color: #333333;
+  color: var(--text-color-second);
   width: 292px;
   height: 49px;
   padding: 14px 20px;
@@ -451,11 +542,23 @@ input, button, select {
 }
 
 .view-button {
-  color: #000000;
+  position: relative;
+  color: var(--text-color-basic);
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
-  border: 1px solid #e5e5e5;
+  border: 2px solid var(--color-grey);
   border-radius: 4px;
+}
+
+.view-icon {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: -2px;
+  margin: auto;
+  fill: var(--text-color-basic);
 }
 
 .view-button:not(:last-child) {
@@ -463,7 +566,7 @@ input, button, select {
 }
 
 .view-button-current {
-  border-color: #000000;
+  border-color: var(--text-color-basic);
 }
 
 .hotel-list {
@@ -485,7 +588,7 @@ input, button, select {
   "stars rating";
   gap: 20px 16px;
   border-radius: 4px;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--color-grey);
   width: 300px;
   padding: 20px;
 }
@@ -541,7 +644,14 @@ input, button, select {
   margin: 0;
   border-radius: 4px;
   text-transform: uppercase;
-  background-color: #f2f2f2;
+  background-color: var(--color-light-grey);
+}
+
+.divider-big {
+  background-color: rgba(230, 230, 230, 1);
+  width: 1060px;
+  height: 1px;
+  margin: 0 auto 40px;
 }
 
 .pagination {
@@ -551,6 +661,7 @@ input, button, select {
   line-height: 36px;
   font-weight: 700;
   max-width: 1060px;
+  margin-bottom: 60px;
 }
 
 .pagination-link {
@@ -558,8 +669,8 @@ input, button, select {
   box-sizing: border-box;
   width: 60px;
   height: 60px;
-  color: #ffffff;
-  background-color: #82B3D3;
+  color: var(--color-white);
+  background-color: var(--color-blue-basic);
   border-radius: 4px;
   text-decoration: none;
   padding: 12px;
@@ -570,11 +681,11 @@ input, button, select {
 }
 
 .pagination-current {
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: var(--color-light-grey);
+  color: var(--text-color-basic);
 }
 
 .pagination-more {
   background-color: transparent;
-  color: #000000;
+  color: var(--text-color-basic);
 }
