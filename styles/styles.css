@@ -187,6 +187,7 @@ input, button, select {
 
 .navigation-button {
   margin-left: 20px;
+  padding: 8px 34px;
 }
 
 .index-hero {
@@ -253,7 +254,7 @@ input, button, select {
 }
 
 .advantages-text {
-  width: 230px;
+  width: 235px;
   margin: auto;
 }
 
@@ -526,6 +527,7 @@ input, button, select {
   line-height: 36px;
   font-weight: 700;
   text-align: left;
+  text-transform: uppercase;
   margin: 0 200px 0 0;
 }
 
