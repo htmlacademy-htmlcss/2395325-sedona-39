@@ -26,6 +26,15 @@
   --color-blue-second-20: rgba(131, 179, 211, 0.2);
   --button-color-basic: rgba(117, 97, 87, 1);
   --button-color-green: rgba(125, 181, 79, 1);
+  --button-color-basic-hover: rgba(97, 80, 72, 1);
+  --button-color-blue-hover: rgba(104, 162, 202, 1);
+  --button-color-green-hover: rgba(108, 158, 66, 1);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --shadow: rgba(0, 0, 0, 0.2);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+  --icon-color-blue-active: rgba(104, 162, 202, 0.3);
+  --phone-color-active: rgba(117, 97, 87, 0.3);
 }
 
 html {
@@ -52,7 +61,7 @@ input, button, select {
 
 .page-container {
   background-color: var(--color-white);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px var(--shadow);
   width: 1200px;
   margin: 0 auto;
 }
@@ -71,7 +80,6 @@ input, button, select {
 .button {
   display: inline-block;
   cursor: pointer;
-  background-color: var(--button-color-basic);
   color: var(--color-white);
   border: none;
   border-radius: 4px;
@@ -83,9 +91,24 @@ input, button, select {
   text-decoration: none;
 }
 
+.button-basic {
+  background-color: var(--button-color-basic);
+}
+
+.button-basic:hover {
+  background-color: var(--button-color-basic-hover);
+}
+
+.button-basic:focus {
+  background-color: var(--button-color-basic-hover);
+}
+
+.button-basic:active {
+  color: var(--color-white-30);
+}
+
 .button-card {
   display: inline-block;
-  background-color: var(--button-color-basic);
   color: var(--color-white);
   border: none;
   border-radius: 4px;
@@ -103,13 +126,49 @@ input, button, select {
   background-color: var(--color-blue-basic);
 }
 
+.button-blue:hover {
+  background-color: var(--button-color-blue-hover);
+}
+
+.button-blue:focus {
+  background-color: var(--button-color-blue-hover);
+}
+
+.button-blue:active {
+  color: var(--color-white-30);
+}
+
 .button-green {
   background-color: var(--button-color-green);
 }
 
+.button-green:hover {
+  background-color: var(--button-color-green-hover);
+}
+
+.button-green:focus {
+  background-color: var(--button-color-green-hover);
+}
+
+.button-green:active {
+  color: var(--color-white-30);
+}
+
 .button-transparent {
   background-color: transparent;
-  border: none;
+  min-width: 190px;
+}
+.button-transparent:hover {
+  color: var(--color-white-60);
+}
+
+.button-transparent:focus {
+  outline: 3px solid var(--color-blue-basic);
+  outline-offset: -1px;
+}
+
+.button-transparent:active {
+  color: var(--color-white-30);
 }
 
 .button-big {
@@ -183,6 +242,26 @@ input, button, select {
   left: 0;
   margin: auto;
   fill: var(--text-color-basic);
+}
+
+.navigation-favorite {
+  position: relative;
+}
+
+.navigation-favorite::after {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  content: "12";
+  min-width: 20px;
+  box-sizing: border-box;
+  height: 20px;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px 5px 5px 4px;
+  color: var(--color-white);
+  background-color: var(--button-color-green);
+  border-radius: 50%;
 }
 
 .navigation-button {
@@ -267,16 +346,15 @@ input, button, select {
 }
 
 .divider {
-  display: block;
-  box-sizing: border-box;
+  background-color: var(--color-black-30);
   width: 60px;
+  height: 2px;
   margin: auto;
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item:first-child .divider,
 .advantages-item:last-child .divider {
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--color-white-30);
 }
 
 .advantages-description {
@@ -389,14 +467,15 @@ input, button, select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 120px;
+  min-height: 50px;
+  width: 1060px;
+  padding: 40px 70px 30px;
 }
 
 .footer-socials {
   display: flex;
   flex-wrap: wrap;
   max-width: 192px;
-  margin-left: 70px;
 }
 
 .footer-socials-link {
@@ -415,6 +494,18 @@ input, button, select {
   fill: var(--color-blue-basic);
 }
 
+.socials-icon:hover {
+  fill: var(--button-color-blue-hover);
+}
+
+.socials-icon:focus {
+  fill: var(--button-color-blue-hover);
+}
+
+.socials-icon:active {
+  fill: var(--icon-color-blue-active);
+}
+
 .footer-phone {
   font-style: normal;
   font-size: 40px;
@@ -424,8 +515,16 @@ input, button, select {
   width: 720px;
 }
 
-.html-academy-logo {
-  margin-right: 70px;
+.footer-phone:hover {
+  color: var(--button-color-basic);
+}
+
+.footer-phone:focus {
+  color: var(--button-color-basic);
+}
+
+.footer-phone:active {
+  color: var(--phone-color-active);
 }
 
 .catalog-header-block {
@@ -453,16 +552,20 @@ input, button, select {
 }
 
 .breadcrumbs-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   color: var(--color-white);
   list-style: none;
+  width: max-content;
 }
 
 .breadcrumbs-link {
   display: block;
+  position: relative;
   margin: 0 28px 0 0;
   color: var(--color-white);
   text-decoration: none;
@@ -471,16 +574,39 @@ input, button, select {
   min-width: 13px;
 }
 
+.breadcrumbs-item.homepage::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 23px;
+  background-image: url(../images/arrow.svg);
+  width: 8px;
+  height: 21px;
+}
+
+.homepage-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  fill: var(--color-white);
+}
+
 .filter-options {
   display: flex;
   width: 1060px;
   min-height: 160px;
-  margin: 0 70px 70px;
+  margin: 0 auto 70px;
 }
 
 .filter-options-group {
   padding: 0;
   border: none;
+}
+
+.filter-options-group:first-child {
   margin-right: 70px;
 }
 
@@ -492,6 +618,7 @@ input, button, select {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  padding: 0;
   padding-bottom: 32px;
 }
 
@@ -501,6 +628,7 @@ input, button, select {
 }
 
 .filter-buttons {
+  align-self: end;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -535,7 +663,13 @@ input, button, select {
   color: var(--text-color-second);
   width: 292px;
   height: 49px;
-  padding: 14px 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 18px;
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  background-color: var(--color-white);
 }
 
 .view-select {
@@ -588,7 +722,7 @@ input, button, select {
   "type price"
   "more favorite"
   "stars rating";
-  gap: 20px 16px;
+  gap: 16px 20px;
   border-radius: 4px;
   border: 1px solid var(--color-grey);
   width: 300px;
@@ -635,6 +769,28 @@ input, button, select {
 .rating-stars {
   grid-area: stars;
   justify-self: start;
+  align-self: center;
+}
+
+.stars-2 {
+  background-image: url(../images/stars-2.svg);
+  background-repeat: no-repeat;
+  width: 140px;
+  height: 37px;
+}
+
+.stars-3 {
+  background-image: url(../images/stars-3.svg);
+  background-repeat: no-repeat;
+  width: 140px;
+  height: 37px;
+}
+
+.stars-4 {
+  background-image: url(../images/stars-4.svg);
+  background-repeat: no-repeat;
+  width: 140px;
+  height: 37px;
 }
 
 .rating-text {
@@ -650,7 +806,7 @@ input, button, select {
 }
 
 .divider-big {
-  background-color: rgba(230, 230, 230, 1);
+  background-color: var(--color-grey);
   width: 1060px;
   height: 1px;
   margin: 0 auto 40px;
@@ -676,6 +832,18 @@ input, button, select {
   border-radius: 4px;
   text-decoration: none;
   padding: 12px;
+}
+
+.pagination-link:hover {
+  background-color: var(--button-color-blue-hover);
+}
+
+.pagination-link:focus {
+  background-color: var(--button-color-blue-hover);
+}
+
+.pagination-link:active {
+  color: var(--color-white-30);
 }
 
 .pagination-item:not(:last-child) {
