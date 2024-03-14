@@ -527,6 +527,22 @@ input, button, select {
   color: var(--phone-color-active);
 }
 
+.html-academy-icon {
+  fill: var(--text-color-basic);
+}
+
+.html-academy-icon:hover {
+  fill: var(--button-color-basic);
+}
+
+.html-academy-icon:focus {
+  fill: var(--button-color-basic);
+}
+
+.html-academy-icon:active {
+  fill: var(--phone-color-active);
+}
+
 .catalog-header-block {
   background-color: var(--color-blue-basic);
   color: var(--color-white);
@@ -547,50 +563,51 @@ input, button, select {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin: 0;
-  padding-bottom: 8px;
+  margin: 0 0 8px 0;
 }
 
 .breadcrumbs-list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin: 0;
   padding: 0;
-  color: var(--color-white);
   list-style: none;
-  width: max-content;
+  color: var(--color-white);
+}
+
+.breadcrumbs-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 10px;
+  content: "";
+  background-image: url(../images/arrow.svg);
+  width: 8px;
+  height: 21px;
+  vertical-align: middle;
 }
 
 .breadcrumbs-link {
-  display: block;
-  position: relative;
-  margin: 0 28px 0 0;
+  display: inline-block;
+  margin: 0 0 0 0;
   color: var(--color-white);
   text-decoration: none;
   font-size: 16px;
   line-height: 21px;
-  min-width: 13px;
 }
 
-.breadcrumbs-item.homepage::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 23px;
-  background-image: url(../images/arrow.svg);
-  width: 8px;
-  height: 21px;
+.homepage {
+  position: relative;
+  padding-right: 10px;
 }
 
 .homepage-icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
+  top: -13px;
   fill: var(--color-white);
 }
 
@@ -853,9 +870,13 @@ input, button, select {
 .pagination-current {
   background-color: var(--color-light-grey);
   color: var(--text-color-basic);
+  pointer-events: none;
+  cursor: default;
 }
 
 .pagination-more {
   background-color: transparent;
   color: var(--text-color-basic);
+  pointer-events: none;
+  cursor: default;
 }
