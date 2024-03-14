@@ -95,10 +95,7 @@ input, button, select {
   background-color: var(--button-color-basic);
 }
 
-.button-basic:hover {
-  background-color: var(--button-color-basic-hover);
-}
-
+.button-basic:hover,
 .button-basic:focus {
   background-color: var(--button-color-basic-hover);
 }
@@ -126,10 +123,7 @@ input, button, select {
   background-color: var(--color-blue-basic);
 }
 
-.button-blue:hover {
-  background-color: var(--button-color-blue-hover);
-}
-
+.button-blue:hover,
 .button-blue:focus {
   background-color: var(--button-color-blue-hover);
 }
@@ -142,10 +136,7 @@ input, button, select {
   background-color: var(--button-color-green);
 }
 
-.button-green:hover {
-  background-color: var(--button-color-green-hover);
-}
-
+.button-green:hover,
 .button-green:focus {
   background-color: var(--button-color-green-hover);
 }
@@ -221,7 +212,7 @@ input, button, select {
   content: "";
   right: 16px;
   left: 16px;
-  bottom: 0;
+  bottom: -1px;
   height: 2px;
   background-color: var(--button-color-basic);
 }
@@ -494,10 +485,7 @@ input, button, select {
   fill: var(--color-blue-basic);
 }
 
-.socials-icon:hover {
-  fill: var(--button-color-blue-hover);
-}
-
+.socials-icon:hover,
 .socials-icon:focus {
   fill: var(--button-color-blue-hover);
 }
@@ -515,10 +503,7 @@ input, button, select {
   width: 720px;
 }
 
-.footer-phone:hover {
-  color: var(--button-color-basic);
-}
-
+.footer-phone:hover,
 .footer-phone:focus {
   color: var(--button-color-basic);
 }
@@ -531,10 +516,7 @@ input, button, select {
   fill: var(--text-color-basic);
 }
 
-.html-academy-icon:hover {
-  fill: var(--button-color-basic);
-}
-
+.html-academy-icon:hover,
 .html-academy-icon:focus {
   fill: var(--button-color-basic);
 }
@@ -676,17 +658,36 @@ input, button, select {
   margin: 0 200px 0 0;
 }
 
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 292px;
+  margin-right: auto;
+}
+
 .sort-results {
   color: var(--text-color-second);
-  width: 292px;
-  height: 49px;
-  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 20px;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 18px;
   border: 2px solid var(--color-grey);
   border-radius: 4px;
   background-color: var(--color-white);
+  background-image: url(../images/dropdown-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 21px center;
+  appearance: none;
+}
+
+.sort-results:hover,
+.sort-results:focus {
+  border-color: var(--button-color-blue-hover);
+}
+
+.sort-results:active {
+  border-color: var(--color-black-30);
 }
 
 .view-select {
@@ -702,6 +703,19 @@ input, button, select {
   height: 48px;
   border: 2px solid var(--color-grey);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  border-color: var(--text-color-basic);
+}
+
+.view-button:focus {
+  border-color: var(--button-color-blue-hover);
+}
+
+.view-button:active {
+  border-color: var(--text-color-basic);
 }
 
 .view-icon {
@@ -720,6 +734,8 @@ input, button, select {
 
 .view-button-current {
   border-color: var(--text-color-basic);
+  pointer-events: none;
+  cursor: default;
 }
 
 .hotel-list {
@@ -851,10 +867,7 @@ input, button, select {
   padding: 12px;
 }
 
-.pagination-link:hover {
-  background-color: var(--button-color-blue-hover);
-}
-
+.pagination-link:hover,
 .pagination-link:focus {
   background-color: var(--button-color-blue-hover);
 }
