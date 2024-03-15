@@ -664,8 +664,7 @@ input, button, select {
   opacity: 0.6;
 }
 
-/* Выяснить, почему не работает */
-.filter-label:focus ~ .control-mark {
+.control-input:focus ~ .control-mark {
   outline: 3px solid var(--color-blue-basic);
 }
 
@@ -716,6 +715,12 @@ input, button, select {
   border: none;
   cursor: pointer;
   appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .input-min {
