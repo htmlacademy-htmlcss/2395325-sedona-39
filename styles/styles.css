@@ -35,6 +35,8 @@
   --color-black-30: rgba(0, 0, 0, 0.3);
   --icon-color-blue-active: rgba(104, 162, 202, 0.3);
   --phone-color-active: rgba(117, 97, 87, 0.3);
+  --modal-container-background: rgba(242, 242, 242, 0.8);
+  --check-mark: rgba(63, 94, 114, 1);
 }
 
 html {
@@ -540,6 +542,163 @@ input, button, select {
   fill: var(--phone-color-active);
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-container-background);
+}
+
+.modal-hotel-search {
+  position: relative;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  width: 717px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 64;
+  right: 52px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: var(--color-light-grey);
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button::before{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) rotate(45deg);
+  width: 18px;
+  height: 2px;
+  background-color: var(--text-color-basic);
+  content: "";
+}
+
+.modal-close-button::after {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%) rotate(-45deg);
+  width: 18px;
+  height: 2px;
+  background-color: var(--text-color-basic);
+  content: "";
+}
+
+.modal-title {
+  margin: 0 0 64px 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.modal-search-form {
+  display: grid;
+  grid-template-rows: repeat(4, 48px);
+  gap: 48px;
+}
+
+.modal-input-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-input-label-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.modal-input {
+  background-color: var(--color-light-grey);
+  border: none;
+  border-radius: 4px;
+  height: 48px;
+  margin-left: auto;
+}
+
+.modal-input-date {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  padding: 12px 20px;
+  padding-right: 60px;
+  width: 440px;
+  box-sizing: border-box;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+
+.calendar-icon {
+  fill: var(--color-black-30);
+}
+
+.date-comment {
+  position: absolute;
+  top: 52px;
+  left: 137px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.comment-not-available {
+  color: var(--text-color-error);
+}
+
+.modal-guests-counters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tooltip {
+  margin-left: 10px;
+  width: 26px;
+  height: 26px;
+}
+
+.modal-input-guests {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  padding: 14px 10px;
+  text-align: center;
+  width: 110px;
+  box-sizing: border-box;
+  appearance: textfield;
+  margin-left: 46px;
+}
+
+.modal-input-guests::-webkit-outer-spin-button,
+.modal-input-guests::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.modal-search-form .button {
+  height: 60px;
+}
+
 .catalog-header-block {
   background-color: var(--color-blue-basic);
   color: var(--color-white);
@@ -692,7 +851,7 @@ input, button, select {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: rgba(63, 94, 114, 1);
+  background-color: var(--check-mark);
   content: "";
 }
 
