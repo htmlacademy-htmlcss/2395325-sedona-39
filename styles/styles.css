@@ -828,7 +828,7 @@ input, button, select {
   transform: rotate(45deg);
   width: 13px;
   height: 13px;
-  background-color: var(--text-color-second);
+  background-color: inherit;
   z-index: 1;
   content: "";
 }
@@ -1130,11 +1130,13 @@ input, button, select {
 .sort-results {
   color: var(--text-color-second);
   width: 100%;
-  padding: 14px 20px;
+  padding: 13px 20px;
   font-size: 18px;
   line-height: 21px;
   border: 2px solid var(--color-grey);
   border-radius: 4px;
+  height: 49px;
+  box-sizing: border-box;
   background-color: var(--color-white);
   background-image: url(../images/dropdown-arrow.svg);
   background-repeat: no-repeat;
