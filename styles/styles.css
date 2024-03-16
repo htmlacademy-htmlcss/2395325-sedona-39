@@ -59,7 +59,9 @@ body {
 }
 
 /* Переписать отдельно к элементам по классу? */
-input, button, select {
+input,
+button,
+select {
   font-family: inherit;
 }
 
