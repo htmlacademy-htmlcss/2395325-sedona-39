@@ -211,9 +211,11 @@
               </label>
 
               <div class="modal-guests-counters">
-                <label class="modal-input-label">
-                  <span class="modal-input-label-title">Взрослые:</span>
-                  <input class="modal-input modal-input-guests" type="number" name="guests-adults" value="2" min="1" required>
+                <div class="guests-counter">
+                  <label class="modal-input-label" for="guests-adults">
+                    <span class="modal-input-label-title">Взрослые:</span>
+                  </label>
+                  <input class="modal-input modal-input-guests" type="number" name="guests-adults" id="guests-adults" value="2" min="1" required>
                   <div class="modal-quantity">
                     <button class="modal-quantity-button" type="button">
                       <span class="visually-hidden">Меньше</span>
@@ -226,26 +228,29 @@
                       <span class="visually-hidden">Больше</span>
                       <span class="button-plus">
                         <svg class="button-plus-svg" xmlns="http://www.w3.org/2000/svg" width="40" height="48" fill="none" viewBox="0 0 40 48">
-                          <path d="M27 23h-6v-6h-2v6h-6v2h6v6h2v-6h6v-2Z"/></svg>
+                         <path d="M27 23h-6v-6h-2v6h-6v2h6v6h2v-6h6v-2Z"/></svg>
                       </span>
                     </button>
                   </div>
-                </label>
-                <label class="modal-input-label">
-                  <span class="modal-input-label-title">Дети:</span>
+                </div>
+
+                <div class="guests-counter">
+                  <label class="modal-input-label" for="guests-kids">
+                    <span class="modal-input-label-title">Дети:</span>
+                  </label>
                   <span class="tooltip">
                     <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                      <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/></svg>
-                    </button>
-                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                     <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/></svg>
+                   </button>
+                   <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                   </span>
-                  <input class="modal-input modal-input-guests" type="number" name="guests-adults" value="2" min="0" required>
+                  <input class="modal-input modal-input-guests" type="number" name="guests-kids" id="guests-kids" value="2" min="0" required>
                   <div class="modal-quantity">
                     <button class="modal-quantity-button" type="button">
                       <span class="visually-hidden">Меньше</span>
                       <span class="button-minus">
                         <svg class="button-minus-svg" xmlns="http://www.w3.org/2000/svg" width="40" height="48" fill="none" viewBox="0 0 40 48">
-                          <path d="M13 23v2h14v-2H13Z"/></svg>
+                         <path d="M13 23v2h14v-2H13Z"/></svg>
                       </span>
                     </button>
                     <button class="modal-quantity-button">
@@ -256,7 +261,7 @@
                       </span>
                     </button>
                   </div>
-                </label>
+                </div>
               </div>
 
               <button class="button button-blue button-big" type="submit">Найти</button>
