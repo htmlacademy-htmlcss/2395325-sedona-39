@@ -58,6 +58,7 @@ body {
   text-align: center;
 }
 
+/* Переписать отдельно к элементам по классу? */
 input, button, select {
   font-family: inherit;
 }
@@ -92,6 +93,11 @@ input, button, select {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.button:disabled,
+.button-card:disabled {
+  background-color: var(--color-grey);
 }
 
 .button-basic {
@@ -158,11 +164,16 @@ input, button, select {
 
 .button-transparent:focus {
   outline: 3px solid var(--color-blue-basic);
-  outline-offset: -1px;
+  outline-offset: -3px;
 }
 
 .button-transparent:active {
   color: var(--color-white-30);
+}
+
+.button-transparent:disabled {
+  background-color: transparent;
+  opacity: 0.1;
 }
 
 .button-big {
@@ -952,6 +963,7 @@ input, button, select {
   font-weight: 700;
   padding: 0;
   padding-bottom: 32px;
+  word-break: break-all;
 }
 
 .filter-label {
@@ -1128,7 +1140,7 @@ input, button, select {
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
-  margin: 0 200px 0 0;
+  margin: 0 auto 0 0;
 }
 
 .select {
@@ -1138,7 +1150,6 @@ input, button, select {
   width: 292px;
   height: 49px;
   box-sizing: border-box;
-  margin-right: auto;
 }
 
 .sort-results {
@@ -1170,7 +1181,7 @@ input, button, select {
 
 .view-select {
   display: flex;
-  margin-left: auto;
+  margin-left: 70px;
 }
 
 .view-button {
@@ -1271,6 +1282,10 @@ input, button, select {
   align-self: center;
 }
 
+.hotel-card-more:not([href]) {
+  background-color: var(--color-grey);
+}
+
 .hotel-card-favorite {
   grid-area: favorite;
   justify-self: end;
@@ -1306,10 +1321,9 @@ input, button, select {
 
 .rating-text {
   grid-area: rating;
-  justify-self: end;
   font-size: 16px;
   line-height: 20px;
-  padding: 9px 22px 8px 23px;
+  padding: 9px 18px 8px 18px;
   margin: 0;
   border-radius: 4px;
   text-transform: uppercase;
