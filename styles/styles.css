@@ -53,9 +53,9 @@ body {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
-  background-color: var(--color-light-grey);
   color: var(--text-color-basic);
   text-align: center;
+  background-color: var(--color-light-grey);
 }
 
 /* Переписать отдельно к элементам по классу? */
@@ -66,10 +66,10 @@ select {
 }
 
 .page-container {
-  background-color: var(--color-white);
-  box-shadow: 0 0 15px var(--shadow);
   width: 1200px;
   margin: 0 auto;
+  background-color: var(--color-white);
+  box-shadow: 0 0 15px var(--shadow);
 }
 
 .visually-hidden {
@@ -85,16 +85,16 @@ select {
 
 .button {
   display: inline-block;
-  cursor: pointer;
-  color: var(--color-white);
-  border: none;
-  border-radius: 4px;
   padding: 8px 50px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .button:disabled,
@@ -117,17 +117,17 @@ select {
 
 .button-card {
   display: inline-block;
-  color: var(--color-white);
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
   width: 140px;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
 }
 
 .button-blue {
@@ -157,8 +157,8 @@ select {
 }
 
 .button-transparent {
-  background-color: transparent;
   min-width: 190px;
+  background-color: transparent;
 }
 .button-transparent:hover {
   color: var(--color-white-60);
@@ -218,19 +218,19 @@ select {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color:var(--text-color-basic);
-  background-color: var(--color-white);
   text-align: center;
   text-decoration: none;
+  color:var(--text-color-basic);
+  background-color: var(--color-white);
 }
 
 .navigation-link-current::after {
   position: absolute;
-  content: "";
   right: 16px;
   left: 16px;
   bottom: -1px;
   height: 2px;
+  content: "";
   background-color: var(--button-color-basic);
 }
 
@@ -262,11 +262,11 @@ select {
   left: 20px;
   content: "12";
   min-width: 20px;
-  box-sizing: border-box;
   height: 20px;
+  padding: 5px 5px 5px 4px;
+  box-sizing: border-box;
   font-size: 10px;
   line-height: 10px;
-  padding: 5px 5px 5px 4px;
   color: var(--color-white);
   background-color: var(--button-color-green);
   border-radius: 50%;
@@ -279,8 +279,8 @@ select {
 
 .index-hero {
   display: block;
-  background: url(../images/sedona-hero.png) no-repeat;
   height: 485px;
+  background: url(../images/sedona-hero.png) no-repeat;
 }
 
 .index-hero-image {
@@ -288,12 +288,12 @@ select {
 }
 
 .section-heading-title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 20px;
 }
 
 .section-heading-title-first {
@@ -301,10 +301,10 @@ select {
 }
 
 .section-heading-text {
-  color: var(--text-color-second);
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
-  margin: 0;
+  color: var(--text-color-second);
 }
 
 .advantages-heading {
@@ -320,16 +320,16 @@ select {
 .advantages-item {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
   width: 400px;
   min-height: 385px;
-  flex-grow: 1;
 }
 
 .advantages-item:first-child,
 .advantages-item:last-child {
+  width: 1200px;
   background-color: var(--color-blue-basic);
   color: var(--color-white);
-  width: 1200px;
 }
 
 .advantages-item:nth-child(2),
@@ -347,18 +347,18 @@ select {
 }
 
 .advantages-title {
+  margin: 0 auto 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 auto 30px;
 }
 
 .divider {
-  background-color: var(--color-black-30);
   width: 60px;
   height: 2px;
   margin: auto;
+  background-color: var(--color-black-30);
 }
 
 .advantages-item:first-child .divider,
@@ -392,13 +392,13 @@ select {
 .recommendations-item {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
   width: 400px;
   min-height: 385px;
   background-repeat: no-repeat;
   background-size: 75px 72px;
   background-position: 50% 81px;
-  flex-grow: 1;
 }
 
 .recommendations-item:nth-child(1) {
@@ -416,17 +416,17 @@ select {
 .recommendations-title {
   display: block;
   width: 230px;
+  margin: 183px auto 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 183px auto 30px;
 }
 
 .recommendations-description {
   width: 230px;
-  color: var(--text-color-second);
   margin: 0;
+  color: var(--text-color-second);
 }
 
 .recommendations-item:nth-child(odd) {
@@ -456,12 +456,12 @@ select {
 }
 
 .subscription-background {
-  background-color: var(--color-blue-basic);
   color: var(--color-white);
+  background-color: var(--color-blue-basic);
   background-image: url(../images/subscribe-background.jpg);
   background-size: 1200px 415px;
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .subscription-form {
@@ -470,16 +470,16 @@ select {
 }
 
 .subscription-email {
-  box-sizing: border-box;
   width: 452px;
   height: 52px;
-  background-color: var(--color-light-grey);
+  margin: 0;
+  padding: 14px 20px;
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
   border: none;
-  margin: 0;
-  padding: 14px 20px;
   border-radius: 4px 0 0 4px;
+  background-color: var(--color-light-grey);
   cursor: pointer;
 }
 
@@ -528,12 +528,12 @@ select {
 }
 
 .footer-phone {
-  font-style: normal;
+  width: 720px;
   font-size: 40px;
   line-height: 40px;
+  font-style: normal;
   text-decoration: none;
   color: var(--text-color-basic);
-  width: 720px;
 }
 
 .footer-phone:hover,
@@ -574,25 +574,25 @@ select {
 
 .modal-hotel-search {
   position: relative;
+  z-index: 1;
   margin: auto;
   padding: 64px 70px;
-  background-color: #ffffff;
-  border-radius: 30px;
   width: 717px;
   min-height: 576px;
   box-sizing: border-box;
   text-align: left;
+  background-color: var(--color-white);
+  border-radius: 30px;
   box-shadow: 0 25px 50px 0 var(--modal-shadow);
-  z-index: 1;
 }
 
 .modal-close-button {
   position: absolute;
-  padding: 0;
   top: 64;
   right: 52px;
   width: 53px;
   height: 53px;
+  padding: 0;
   border-radius: 50%;
   background-color: var(--color-light-grey);
   border: none;
@@ -601,10 +601,10 @@ select {
 
 .close-button {
   position: absolute;
-  width: 20px;
-  height: 20px;
   top: 17px;
   left: 17px;
+  width: 20px;
+  height: 20px;
 }
 
 .close-button-svg{
@@ -627,11 +627,11 @@ select {
 
 .modal-title {
   margin: 0 0 64px 0;
+  padding-right: 44px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-right: 44px;
 }
 
 .modal-search-form {
@@ -647,21 +647,21 @@ select {
 }
 
 .modal-input-label-title {
+  max-width: 137px;
+  margin: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
-  margin: 0;
-  max-width: 137px;
 }
 
 .modal-input {
   position: relative;
+  height: 48px;
+  margin-left: auto;
   background-color: var(--color-light-grey);
   border: none;
   border-radius: 4px;
-  height: 48px;
-  margin-left: auto;
   cursor: pointer;
 }
 
@@ -675,13 +675,13 @@ select {
 }
 
 .modal-input-date {
+  width: 440px;
+  padding: 12px 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 12px 20px;
-  padding-right: 60px;
-  width: 440px;
-  box-sizing: border-box;
 }
 
 .modal-icon {
@@ -722,27 +722,27 @@ select {
 }
 
 .tooltip {
-  margin-left: 10px;
   width: 26px;
   height: 26px;
+  margin-left: 10px;
 }
 
 .modal-input-guests {
+  width: 110px;
+  box-sizing: border-box;
+  padding: 14px 10px;
+  margin-left: 46px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  padding: 14px 10px;
   text-align: center;
-  width: 110px;
-  box-sizing: border-box;
   appearance: textfield;
-  margin-left: 46px;
 }
 
 .modal-input-guests::-webkit-outer-spin-button,
 .modal-input-guests::-webkit-inner-spin-button {
-  appearance: none;
   margin: 0;
+  appearance: none;
 }
 
 .modal-quantity {
@@ -759,12 +759,12 @@ select {
   display: block;
   height: 48px;
   width: 40px;
-  cursor: pointer;
   padding: 0;
   border: none;
   border-radius: 4px;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 }
 
 .button-minus,
@@ -813,35 +813,35 @@ select {
 }
 
 .tooltip-toggle {
-  border: none;
-  background-color: transparent;
+  display: block;
   padding: 0;
   margin: 0;
-  display: block;
+  border: none;
+  background-color: transparent;
 }
 
 .tooltip-icon {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
 }
 
 .tooltip-text {
   position: absolute;
   top: 100%;
-  margin-top: 15px;
-  background-color: var(--text-color-second);
-  color: var(--color-white);
-  border-radius: 10px;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 15px 18px 18px 22px;
-  width: 256px;
-  box-sizing: border-box;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
   display: none;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  color: var(--color-white);
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--text-color-second);
+  border-radius: 10px;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -854,10 +854,10 @@ select {
   top: -6px;
   left: 121px;
   transform: rotate(45deg);
+  z-index: 1;
   width: 13px;
   height: 13px;
   background-color: inherit;
-  z-index: 1;
   content: "";
 }
 
@@ -866,14 +866,14 @@ select {
 }
 
 .catalog-header-block {
-  background-color: var(--color-blue-basic);
-  color: var(--color-white);
-  background-image: url(../images/filters-background.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
   height: 412px;
   width: 1200px;
+  color: var(--color-white);
   text-align: left;
+  background-color: var(--color-blue-basic);
+  background-image: url(../images/filters-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .catalog-header {
@@ -882,10 +882,10 @@ select {
 }
 
 .catalog-header-title {
+  margin: 0 0 8px 0;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  margin: 0 0 8px 0;
 }
 
 .breadcrumbs-list {
@@ -894,8 +894,8 @@ select {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  list-style: none;
   color: var(--color-white);
+  list-style: none;
 }
 
 .breadcrumbs-item {
@@ -908,11 +908,11 @@ select {
 .breadcrumbs-item:not(:last-child)::after {
   display: inline-block;
   margin: 0 10px;
-  content: "";
-  background-image: url(../images/arrow.svg);
   width: 8px;
   height: 21px;
   vertical-align: top;
+  background-image: url(../images/arrow.svg);
+  content: "";
 }
 
 .breadcrumbs-link {
@@ -960,11 +960,11 @@ select {
 }
 
 .filter-options-title {
+  padding: 0;
+  padding-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  padding: 0;
-  padding-bottom: 32px;
   word-break: break-all;
 }
 
@@ -1000,8 +1000,8 @@ select {
 
 .control-input[type="checkbox"]:checked + .control-mark {
   background-image: url(../images/check.svg);
-  background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .control-input[type="radio"] + .control-mark {
@@ -1025,19 +1025,19 @@ select {
 .range-wrapper-inputs {
   display: flex;
   justify-content: center;
-  width: 288px;
   gap: 2px;
+  width: 288px;
   margin-bottom: 44px;
 }
 
 .range-input {
+  padding: 12px 40px 12px 20px;
+  box-sizing: border-box;
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  padding: 12px 40px 12px 20px;
   width: 143px;
-  box-sizing: border-box;
-  margin: 0;
   border: none;
   cursor: pointer;
   appearance: textfield;
@@ -1045,8 +1045,8 @@ select {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
   margin: 0;
+  appearance: none;
 }
 
 .input-min {
@@ -1064,11 +1064,11 @@ select {
 
 .range-text {
   position: absolute;
-  color: var(--color-black-30);
-  line-height: 24px;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+  line-height: 24px;
+  color: var(--color-black-30);
 }
 
 .range-scale {
@@ -1086,14 +1086,14 @@ select {
 
 .range-toggle {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   border: none;
   border-radius: 5px;
   background-color: var(--color-white);
   cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .range-toggle:focus {
@@ -1113,10 +1113,9 @@ select {
 }
 
 .filter-buttons {
-  align-self: end;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-self: end;
   gap: 32px;
   width: 191px;
   margin-left: auto;
@@ -1125,24 +1124,24 @@ select {
 .search-results {
   display: flex;
   flex-direction: column;
-  margin: 50px auto 0;
   width: 1060px;
+  margin: 50px auto 0;
 }
 
 .search-results-header {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
   height: 49px;
+  margin-bottom: 40px;
 }
 
 .search-results-quantity {
+  margin: 0 auto 0 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
-  margin: 0 auto 0 0;
 }
 
 .select {
@@ -1155,19 +1154,19 @@ select {
 }
 
 .sort-results {
-  color: var(--text-color-second);
   width: 100%;
+  height: 49px;
   padding: 13px 20px;
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 21px;
+  color: var(--text-color-second);
   border: 2px solid var(--color-grey);
   border-radius: 4px;
-  height: 49px;
-  box-sizing: border-box;
   background-color: var(--color-white);
   background-image: url(../images/dropdown-arrow.svg);
-  background-repeat: no-repeat;
   background-position: right 21px center;
+  background-repeat: no-repeat;
   appearance: none;
   cursor: pointer;
 }
@@ -1188,10 +1187,10 @@ select {
 
 .view-button {
   position: relative;
-  color: var(--text-color-basic);
-  box-sizing: border-box;
   width: 48px;
   height: 48px;
+  box-sizing: border-box;
+  color: var(--text-color-basic);
   border: 2px solid var(--color-grey);
   border-radius: 4px;
   cursor: pointer;
@@ -1248,9 +1247,9 @@ select {
   "stars rating";
   gap: 16px 20px;
   border-radius: 4px;
-  outline: 1px solid var(--color-grey);
   width: 300px;
   padding: 20px;
+  outline: 1px solid var(--color-grey);
 }
 
 .hotel-card-image {
@@ -1301,64 +1300,64 @@ select {
 }
 
 .stars-2 {
-  background-image: url(../images/stars-2.svg);
-  background-repeat: no-repeat;
   width: 140px;
   height: 37px;
+  background-image: url(../images/stars-2.svg);
+  background-repeat: no-repeat;
 }
 
 .stars-3 {
-  background-image: url(../images/stars-3.svg);
-  background-repeat: no-repeat;
   width: 140px;
   height: 37px;
+  background-image: url(../images/stars-3.svg);
+  background-repeat: no-repeat;
 }
 
 .stars-4 {
-  background-image: url(../images/stars-4.svg);
-  background-repeat: no-repeat;
   width: 140px;
   height: 37px;
+  background-image: url(../images/stars-4.svg);
+  background-repeat: no-repeat;
 }
 
 .rating-text {
   grid-area: rating;
-  font-size: 16px;
-  line-height: 20px;
   padding: 9px 18px 8px 18px;
   margin: 0;
+  font-size: 16px;
+  line-height: 20px;
   border-radius: 4px;
   text-transform: uppercase;
   background-color: var(--color-light-grey);
 }
 
 .divider-big {
-  background-color: var(--color-grey);
   width: 1060px;
   height: 1px;
   margin: 0 auto 40px;
+  background-color: var(--color-grey);
 }
 
 .pagination {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1060px;
+  margin-bottom: 60px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  max-width: 1060px;
-  margin-bottom: 60px;
 }
 
 .pagination-link {
   display: block;
-  box-sizing: border-box;
   width: 60px;
   height: 60px;
+  padding: 12px;
+  box-sizing: border-box;
+  text-decoration: none;
   color: var(--color-white);
   background-color: var(--color-blue-basic);
   border-radius: 4px;
-  text-decoration: none;
-  padding: 12px;
 }
 
 .pagination-link:hover,
@@ -1375,15 +1374,15 @@ select {
 }
 
 .pagination-current {
-  background-color: var(--color-light-grey);
   color: var(--text-color-basic);
+  background-color: var(--color-light-grey);
   pointer-events: none;
   cursor: default;
 }
 
 .pagination-more {
-  background-color: transparent;
   color: var(--text-color-basic);
+  background-color: transparent;
   pointer-events: none;
   cursor: default;
 }
