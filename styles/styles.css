@@ -195,6 +195,7 @@ input, button, select {
 
 .navigation-user {
   margin-left: auto;
+  min-width: 268px;
 }
 
 .navigation-link {
@@ -308,6 +309,7 @@ input, button, select {
   justify-content: center;
   width: 400px;
   min-height: 385px;
+  flex-grow: 1;
 }
 
 .advantages-item:first-child,
@@ -383,6 +385,7 @@ input, button, select {
   background-repeat: no-repeat;
   background-size: 75px 72px;
   background-position: 50% 81px;
+  flex-grow: 1;
 }
 
 .recommendations-item:nth-child(1) {
@@ -413,8 +416,7 @@ input, button, select {
   margin: 0;
 }
 
-.recommendations-item:first-child,
-.recommendations-item:last-child {
+.recommendations-item:nth-child(odd) {
   background-color: var(--color-blue-second-12);
 }
 
@@ -616,6 +618,7 @@ input, button, select {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  padding-right: 44px;
 }
 
 .modal-search-form {
@@ -634,8 +637,9 @@ input, button, select {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  margin: 0;
   text-transform: capitalize;
+  margin: 0;
+  max-width: 137px;
 }
 
 .modal-input {
@@ -695,6 +699,7 @@ input, button, select {
   position: relative;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .guests-counter {
@@ -844,7 +849,7 @@ input, button, select {
 }
 
 .modal-search-form .button {
-  height: 60px;
+  min-height: 60px;
 }
 
 .catalog-header-block {
@@ -930,7 +935,7 @@ input, button, select {
   padding: 0;
   margin: 0;
   border: none;
-  min-width: 151px;
+  width: 151px;
 }
 
 .filter-options-group:first-child {
