@@ -46,6 +46,7 @@ html {
 
 body {
   display: block;
+  min-width: 1200px;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -56,6 +57,11 @@ body {
   color: var(--text-color-basic);
   text-align: center;
   background-color: var(--color-light-grey);
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Переписать отдельно к элементам по классу? */
@@ -191,24 +197,38 @@ select {
 
 .navigation {
   display: flex;
-  height: 64px;
+  flex-wrap: wrap;
+  min-height: 64px;
   padding: 0 70px;
 }
 
 .main-logo {
   width: 140px;
-  margin-right: 30px;
+  margin-right: 28px;
+  margin-bottom: -6px;
+}
+
+.logo-sedona {
+  display: block;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 506px;
 }
 
 .navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   margin-left: auto;
   min-width: 268px;
+}
+
+.navigation-user .navigation-item:last-child {
+  align-self: center;
 }
 
 .navigation-link {
@@ -273,6 +293,7 @@ select {
 }
 
 .navigation-button {
+  width: 160px;
   margin-left: 20px;
   padding: 8px 34px;
 }
@@ -308,6 +329,8 @@ select {
 }
 
 .advantages-heading {
+  padding-left: 70px;
+  padding-right: 70px;
   margin: 69px auto;
 }
 
@@ -343,6 +366,7 @@ select {
 
 .advantages-text {
   width: 235px;
+  padding: 85px;
   margin: auto;
 }
 
@@ -381,6 +405,8 @@ select {
 }
 
 .recommendations-heading {
+  padding-left: 70px;
+  padding-right: 70px;
   margin: 64px auto;
 }
 
@@ -426,6 +452,7 @@ select {
 .recommendations-description {
   width: 230px;
   margin: 0;
+  padding-bottom: 81px;
   color: var(--text-color-second);
 }
 
@@ -434,6 +461,8 @@ select {
 }
 
 .search-heading {
+  padding-left: 70px;
+  padding-right: 70px;
   margin: 96px auto;
 }
 
@@ -444,7 +473,9 @@ select {
 .subscription {
   display: flex;
   flex-direction: column;
-  height: 415px;
+  min-height: 415px;
+  padding-right: 70px;
+  padding-left: 70px;
 }
 
 .subscription-heading {
@@ -471,7 +502,7 @@ select {
 
 .subscription-email {
   width: 452px;
-  height: 52px;
+  min-height: 52px;
   margin: 0;
   padding: 14px 20px;
   box-sizing: border-box;
@@ -528,6 +559,7 @@ select {
 }
 
 .footer-phone {
+  display: inline-block;
   width: 720px;
   font-size: 40px;
   line-height: 40px;
@@ -866,19 +898,22 @@ select {
 }
 
 .catalog-header-block {
-  height: 412px;
+  min-height: 412px;
   width: 1200px;
+  padding: 35px 70px 70px;
+  box-sizing: border-box;
   color: var(--color-white);
   text-align: left;
   background-color: var(--color-blue-basic);
   background-image: url(../images/filters-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .catalog-header {
   width: 1060px;
-  padding: 35px 70px 40px;
+  margin-bottom: 40px;
 }
 
 .catalog-header-title {
@@ -933,11 +968,15 @@ select {
   fill: var(--color-white);
 }
 
+.filter {
+  width: 1060px;
+}
+
 .filter-options {
   display: flex;
   width: 1060px;
   min-height: 160px;
-  margin: 0 auto 70px;
+  margin: 0 auto;
 }
 
 .filter-options-item:not(:last-child) {
@@ -1125,13 +1164,13 @@ select {
   display: flex;
   flex-direction: column;
   width: 1060px;
-  margin: 50px auto 0;
+  padding: 50px 70px 60px;
 }
 
 .search-results-header {
   display: flex;
   align-items: center;
-  height: 49px;
+  min-height: 49px;
   margin-bottom: 40px;
 }
 
@@ -1154,7 +1193,7 @@ select {
 }
 
 .sort-results {
-  width: 100%;
+  width: 292px;
   height: 49px;
   padding: 13px 20px;
   box-sizing: border-box;
@@ -1342,7 +1381,6 @@ select {
   display: flex;
   flex-wrap: wrap;
   max-width: 1060px;
-  margin-bottom: 60px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -1350,8 +1388,8 @@ select {
 
 .pagination-link {
   display: block;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px;
   box-sizing: border-box;
   text-decoration: none;
