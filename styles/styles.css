@@ -32,6 +32,7 @@
   --color-white-30: rgba(255, 255, 255, 0.3);
   --color-white-60: rgba(255, 255, 255, 0.6);
   --shadow: rgba(0, 0, 0, 0.2);
+  --modal-shadow: rgba(0, 0, 0, 0.15);
   --color-black-30: rgba(0, 0, 0, 0.3);
   --icon-color-blue-active: rgba(104, 162, 202, 0.3);
   --phone-color-active: rgba(117, 97, 87, 0.3);
@@ -552,6 +553,10 @@ input, button, select {
   background-color: var(--modal-container-background);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal-hotel-search {
   position: relative;
   margin: auto;
@@ -559,8 +564,10 @@ input, button, select {
   background-color: #ffffff;
   border-radius: 30px;
   width: 717px;
+  min-height: 576px;
   box-sizing: border-box;
   text-align: left;
+  box-shadow: 0 25px 50px 0 var(--modal-shadow);
 }
 
 .modal-close-button {
@@ -576,26 +583,30 @@ input, button, select {
   cursor: pointer;
 }
 
-.modal-close-button::before{
+.close-button {
   position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateX(50%) rotate(45deg);
-  width: 18px;
-  height: 2px;
-  background-color: var(--text-color-basic);
-  content: "";
+  width: 20px;
+  height: 20px;
+  top: 17px;
+  left: 17px;
 }
 
-.modal-close-button::after {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translateX(50%) rotate(-45deg);
-  width: 18px;
-  height: 2px;
-  background-color: var(--text-color-basic);
-  content: "";
+.close-button-svg{
+  fill: var(--text-color-basic);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus,
+.modal-close-button:active {
+  background-color: var(--color-grey);
+}
+
+.modal-close-button:focus {
+  outline: 3px solid var(--color-blue-basic);
+}
+
+.modal-close-button:active .close-button-svg {
+  fill: var(--color-black-30);
 }
 
 .modal-title {
@@ -627,11 +638,22 @@ input, button, select {
 }
 
 .modal-input {
+  position: relative;
   background-color: var(--color-light-grey);
   border: none;
   border-radius: 4px;
   height: 48px;
   margin-left: auto;
+  cursor: pointer;
+}
+
+.modal-input:hover {
+  background-color: var(--color-grey);
+}
+
+.modal-input:focus {
+  background-color: var(--color-grey);
+  outline: 3px solid var(--color-blue-basic);
 }
 
 .modal-input-date {
@@ -648,10 +670,12 @@ input, button, select {
   position: absolute;
   top: 14px;
   right: 20px;
-}
-
-.calendar-icon {
-  fill: var(--color-black-30);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/calendar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .date-comment {
@@ -693,6 +717,120 @@ input, button, select {
 .modal-input-guests::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.modal-quantity {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+
+.modal-quantity-button {
+  position: relative;
+  height: 48px;
+  width: 40px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+}
+
+.button-minus,
+.button-plus {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.button-minus-svg,
+.button-plus-svg {
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  right: 10px;
+  fill: var(--phone-color-active);
+}
+
+.modal-quantity-button:hover .button-minus-svg,
+.modal-quantity-button:hover .button-plus-svg,
+.modal-quantity-button:focus .button-minus-svg,
+.modal-quantity-button:focus .button-plus-svg,
+.modal-quantity-button:active .button-minus-svg,
+.modal-quantity-button:active .button-plus-svg {
+  fill: var(--text-color-basic);
+}
+
+.modal-quantity-button:focus .button-minus,
+.modal-quantity-button:focus .button-plus {
+  outline: 3px solid var(--color-blue-basic);
+}
+
+.modal-quantity-button:active .button-minus-svg,
+.modal-quantity-button:active .button-plus-svg {
+  fill-opacity: 0.2;
+}
+
+.tooltip {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  background-color: var(--text-color-second);
+  color: var(--color-white);
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 15px 18px 18px 22px;
+  width: 256px;
+  box-sizing: border-box;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  top: -6px;
+  left: 121px;
+  transform: rotate(45deg);
+  width: 13px;
+  height: 13px;
+  background-color: var(--text-color-second);
+  z-index: 1;
+  content: "";
 }
 
 .modal-search-form .button {
