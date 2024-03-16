@@ -222,13 +222,10 @@ select {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: start;
   margin-left: auto;
-  min-width: 268px;
-}
-
-.navigation-user .navigation-item:last-child {
-  align-self: center;
+  max-width: 268px;
 }
 
 .navigation-link {
@@ -294,7 +291,7 @@ select {
 
 .navigation-button {
   width: 160px;
-  margin-left: 20px;
+  margin: 14px 0 0 20px;
   padding: 8px 34px;
 }
 
@@ -530,13 +527,20 @@ select {
 .footer-socials {
   display: flex;
   flex-wrap: wrap;
-  max-width: 192px;
+  width: 145px;
+}
+
+.footer-socials-item {
+  position: relative;
+  width: 48px;
+  height: 41px;
 }
 
 .footer-socials-link {
-  position: relative;
+  position: absolute;
   display: block;
   width: 48px;
+  height: 41px;
 }
 
 .socials-icon {
@@ -565,6 +569,7 @@ select {
   line-height: 40px;
   font-style: normal;
   text-decoration: none;
+  word-break: break-all;
   color: var(--text-color-basic);
 }
 
@@ -1154,10 +1159,10 @@ select {
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  align-self: end;
   gap: 32px;
   width: 191px;
   margin-left: auto;
+  margin-top: 56px;
 }
 
 .search-results {
@@ -1221,6 +1226,9 @@ select {
 
 .view-select {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 160px;
   margin-left: 70px;
 }
 
@@ -1255,10 +1263,6 @@ select {
   left: -2px;
   margin: auto;
   fill: var(--text-color-basic);
-}
-
-.view-button:not(:last-child) {
-  margin-right: 8px;
 }
 
 .view-button-current {
@@ -1384,6 +1388,7 @@ select {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  gap: 8px;
 }
 
 .pagination-link {
@@ -1405,10 +1410,6 @@ select {
 
 .pagination-link:active {
   color: var(--color-white-30);
-}
-
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .pagination-current {
