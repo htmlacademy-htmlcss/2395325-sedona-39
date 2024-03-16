@@ -44,7 +44,7 @@
               </a>
             </li>
             <li class="navigation-item">
-              <button class="button button-basic navigation-button" href="#">Хочу сюда!</button>
+              <button class="button button-basic navigation-button" type="button">Хочу сюда!</button>
             </li>
           </ul>
         </nav>
@@ -198,21 +198,21 @@
 
             <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="modal-input-label">
-                <h3 class="modal-input-label-title">Дата заезда:</h3>
+                <span class="modal-input-label-title">Дата заезда:</span>
                 <input class="modal-input modal-input-date" type="text" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
                 <span class="modal-icon"></span>
-                <div class="date-comment comment-not-available">Мы не можем отправить вас в прошлое.</div>
+                <span class="date-comment comment-not-available">Мы не можем отправить вас в прошлое.</span>
               </label>
               <label class="modal-input-label">
-                <h3 class="modal-input-label-title">Дата выезда:</h3>
+                <span class="modal-input-label-title">Дата выезда:</span>
                 <input class="modal-input modal-input-date" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
                 <span class="modal-icon"></span>                </span>
-                <div class="date-comment comment-available">На эти даты есть свободные номера. Пока есть.</div>
+                <span class="date-comment comment-available">На эти даты есть свободные номера. Пока есть.</span>
               </label>
 
               <div class="modal-guests-counters">
                 <label class="modal-input-label">
-                  <h3 class="modal-input-label-title">Взрослые:</h3>
+                  <span class="modal-input-label-title">Взрослые:</span>
                   <input class="modal-input modal-input-guests" type="number" name="guests-adults" value="2" min="1" required>
                   <div class="modal-quantity">
                     <button class="modal-quantity-button" type="button">
@@ -232,9 +232,9 @@
                   </div>
                 </label>
                 <label class="modal-input-label">
-                  <h3 class="modal-input-label-title">Дети:</h3>
+                  <span class="modal-input-label-title">Дети:</span>
                   <span class="tooltip">
-                    <button class="tooltip-toggle" class="button" aria-labelledby="tooltip-label">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
                       <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/></svg>
                     </button>
                     <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
