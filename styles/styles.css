@@ -209,6 +209,8 @@ img {
 }
 
 .logo-sedona {
+  position: relative;
+  z-index: 1;
   display: block;
 }
 
