@@ -666,7 +666,7 @@ img {
 
 .modal-close-button {
   position: absolute;
-  top: 64;
+  top: 64px;
   right: 52px;
   width: 53px;
   height: 53px;
