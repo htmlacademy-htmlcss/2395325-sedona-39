@@ -106,12 +106,16 @@ img {
   background-color: var(--color-grey);
 }
 
+.button:focus-visible {
+  outline: none;
+}
+
 .button-basic {
   background-color: var(--button-color-basic);
 }
 
 .button-basic:hover,
-.button-basic:focus {
+.button-basic:focus-visible {
   background-color: var(--button-color-basic-hover);
 }
 
@@ -135,12 +139,16 @@ img {
   border-radius: 4px;
 }
 
+.button-card:focus-visible {
+  outline: none;
+}
+
 .button-blue {
   background-color: var(--color-blue-basic);
 }
 
 .button-blue:hover,
-.button-blue:focus {
+.button-blue:focus-visible {
   background-color: var(--button-color-blue-hover);
 }
 
@@ -153,7 +161,7 @@ img {
 }
 
 .button-green:hover,
-.button-green:focus {
+.button-green:focus-visible {
   background-color: var(--button-color-green-hover);
 }
 
@@ -169,7 +177,7 @@ img {
   color: var(--color-white-60);
 }
 
-.button-transparent:focus {
+.button-transparent:focus-visible {
   outline: 3px solid var(--color-blue-basic);
   outline-offset: -3px;
 }
@@ -187,6 +195,10 @@ img {
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
+}
+
+.button-big:focus-visible {
+  outline: none;
 }
 
 .list {
@@ -518,6 +530,10 @@ img {
   cursor: pointer;
 }
 
+.subscription-email:focus-visible {
+  outline: 3px solid var(--color-blue-basic);
+}
+
 .subscription-form .button {
   border-radius: 0 4px 4px 0;
 }
@@ -561,7 +577,7 @@ img {
 }
 
 .socials-icon:hover,
-.socials-icon:focus {
+.socials-icon:focus-visible {
   fill: var(--button-color-blue-hover);
 }
 
@@ -581,7 +597,7 @@ img {
 }
 
 .footer-phone:hover,
-.footer-phone:focus {
+.footer-phone:focus-visible {
   color: var(--button-color-basic);
 }
 
@@ -594,7 +610,7 @@ img {
 }
 
 .html-academy-icon:hover,
-.html-academy-icon:focus {
+.html-academy-icon:focus-visible {
   fill: var(--button-color-basic);
 }
 
@@ -644,30 +660,29 @@ img {
   cursor: pointer;
 }
 
-.close-button {
+.close-button-svg {
   position: absolute;
   top: 17px;
-  left: 17px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 20px;
   height: 20px;
-}
-
-.close-button-svg{
   fill: var(--text-color-basic);
 }
 
 .modal-close-button:hover,
-.modal-close-button:focus,
+.modal-close-button:focus-visible,
 .modal-close-button:active {
   background-color: var(--color-grey);
 }
 
-.modal-close-button:focus {
+.modal-close-button:focus-visible {
   outline: 3px solid var(--color-blue-basic);
 }
 
 .modal-close-button:active .close-button-svg {
   fill: var(--color-black-30);
+  outline: none;
 }
 
 .modal-title {
@@ -715,7 +730,7 @@ img {
   background-color: var(--color-grey);
 }
 
-.modal-input:focus {
+.modal-input:focus-visible {
   background-color: var(--color-grey);
   outline: 3px solid var(--color-blue-basic);
 }
@@ -814,43 +829,38 @@ img {
   cursor: pointer;
 }
 
-.button-minus,
-.button-plus {
-  position: absolute;
-  top: 14px;
-  left: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-}
-
 .button-minus-svg,
 .button-plus-svg {
   position: absolute;
-  top: -14px;
-  left: -10px;
-  right: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
   fill: var(--phone-color-active);
 }
 
 .modal-quantity-button:hover .button-minus-svg,
 .modal-quantity-button:hover .button-plus-svg,
-.modal-quantity-button:focus .button-minus-svg,
-.modal-quantity-button:focus .button-plus-svg,
+.modal-quantity-button:focus-visible .button-minus-svg,
+.modal-quantity-button:focus-visible .button-plus-svg,
 .modal-quantity-button:active .button-minus-svg,
 .modal-quantity-button:active .button-plus-svg {
   fill: var(--text-color-basic);
 }
 
-.modal-quantity-button:focus .button-minus,
-.modal-quantity-button:focus .button-plus {
+.modal-quantity-button:focus-visible .button-minus-svg,
+.modal-quantity-button:focus-visible .button-plus-svg {
   outline: 3px solid var(--color-blue-basic);
 }
 
 .modal-quantity-button:active .button-minus-svg,
 .modal-quantity-button:active .button-plus-svg {
   fill-opacity: 0.2;
+  outline: none;
 }
 
 .tooltip {
@@ -892,7 +902,7 @@ img {
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus-visible + .tooltip-text {
   display: block;
 }
 
@@ -962,7 +972,7 @@ img {
 
 .breadcrumbs-item:not(:last-child)::after {
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 10px;
   width: 8px;
   height: 21px;
   vertical-align: top;
@@ -979,12 +989,15 @@ img {
 
 .homepage {
   position: relative;
-  padding-right: 10px;
+  width: 12px;
+  height: 12px;
+  padding-right: 8px;
 }
 
 .homepage-icon {
   position: absolute;
-  top: -13px;
+  top: 0;
+  left: 0;
   fill: var(--color-white);
 }
 
@@ -1049,7 +1062,7 @@ img {
   opacity: 0.6;
 }
 
-.control-input:focus ~ .control-mark {
+.control-input:focus-visible ~ .control-mark {
   outline: 3px solid var(--color-blue-basic);
 }
 
@@ -1092,12 +1105,13 @@ img {
 .range-input {
   padding: 12px 40px 12px 20px;
   box-sizing: border-box;
+  width: 143px;
   margin: 0;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
-  width: 143px;
+  background-color: var(--color-light-grey);
   border: none;
   cursor: pointer;
   appearance: textfield;
@@ -1107,6 +1121,10 @@ img {
 .range-input::-webkit-inner-spin-button {
   margin: 0;
   appearance: none;
+}
+
+.range-input:focus-visible {
+  outline: 3px solid var(--color-blue-basic);
 }
 
 .input-min {
@@ -1156,7 +1174,7 @@ img {
   cursor: pointer;
 }
 
-.range-toggle:focus {
+.range-toggle:focus-visible {
   outline: 3px solid var(--color-blue-basic);
 }
 
@@ -1233,8 +1251,9 @@ img {
 }
 
 .sort-results:hover,
-.sort-results:focus {
+.sort-results:focus-visible {
   border-color: var(--button-color-blue-hover);
+  outline: none;
 }
 
 .sort-results:active {
@@ -1265,8 +1284,9 @@ img {
   border-color: var(--text-color-basic);
 }
 
-.view-button:focus {
+.view-button:focus-visible {
   border-color: var(--button-color-blue-hover);
+  outline: none;
 }
 
 .view-button:active {
@@ -1422,8 +1442,9 @@ img {
 }
 
 .pagination-link:hover,
-.pagination-link:focus {
+.pagination-link:focus-visible {
   background-color: var(--button-color-blue-hover);
+  outline: none;
 }
 
 .pagination-link:active {
