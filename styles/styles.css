@@ -714,7 +714,7 @@ img {
 
 .modal-search-form {
   display: grid;
-  grid-template-rows: repeat(4, 48px);
+  grid-template-rows: repeat(4, auto);
   gap: 48px;
 }
 
@@ -909,7 +909,7 @@ img {
   z-index: 1;
   display: none;
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 20px 18px 24px 22px;
   box-sizing: border-box;
   margin-top: 15px;
   color: var(--color-white);
