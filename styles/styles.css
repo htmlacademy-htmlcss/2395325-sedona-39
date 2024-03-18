@@ -383,20 +383,20 @@ img {
   min-height: 385px;
 }
 
+
+.advantages-item:nth-child(even) {
+  background-color: var(--color-blue-second-12);
+}
+
+.advantages-item:nth-child(.recommendations-item:nth-child(odd)) {
+  background-color: var(--color-blue-second-20);
+}
+
 .advantages-item:first-child,
 .advantages-item:last-child {
   width: 1200px;
   background-color: var(--color-blue-basic);
   color: var(--color-white);
-}
-
-.advantages-item:nth-child(2),
-.advantages-item:nth-child(4) {
-  background-color: var(--color-blue-second-12);
-}
-
-.advantages-item:nth-child(3) {
-  background-color: var(--color-blue-second-20);
 }
 
 .advantages-text {
