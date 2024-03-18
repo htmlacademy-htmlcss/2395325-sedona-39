@@ -378,7 +378,6 @@ img {
 .advantages-item {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
   width: 400px;
   min-height: 385px;
 }
@@ -388,7 +387,7 @@ img {
   background-color: var(--color-blue-second-12);
 }
 
-.advantages-item:nth-child(.recommendations-item:nth-child(odd)) {
+.advantages-item:nth-child(odd) {
   background-color: var(--color-blue-second-20);
 }
 
@@ -453,7 +452,6 @@ img {
 .recommendations-item {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   align-items: center;
   width: 400px;
   min-height: 385px;
