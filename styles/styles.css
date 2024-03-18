@@ -333,8 +333,10 @@ img {
 
 .index-hero {
   display: block;
+  width: 1200px;
   height: 485px;
   background: url(../images/sedona-hero.png) no-repeat;
+  background-color: var(--button-color-blue-hover);
 }
 
 .index-hero-image {
@@ -800,12 +802,6 @@ img {
   align-items: center;
 }
 
-.tooltip {
-  width: 26px;
-  height: 26px;
-  margin-left: 10px;
-}
-
 .modal-input-guests {
   width: 110px;
   box-sizing: border-box;
@@ -885,6 +881,7 @@ img {
   position: relative;
   width: 26px;
   height: 26px;
+  margin-left: 10px;
 }
 
 .tooltip-toggle {
