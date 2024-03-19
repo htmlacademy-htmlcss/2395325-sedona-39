@@ -333,8 +333,10 @@ img {
 
 .index-hero {
   display: block;
+  width: 1200px;
   height: 485px;
-  background: url(../images/sedona-hero.png) no-repeat;
+  background: url(../images/sedona-hero.jpg) no-repeat;
+  background-color: var(--button-color-blue-hover);
 }
 
 .index-hero-image {
@@ -376,9 +378,17 @@ img {
 .advantages-item {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
   width: 400px;
   min-height: 385px;
+}
+
+
+.advantages-item:nth-child(even) {
+  background-color: var(--color-blue-second-12);
+}
+
+.advantages-item:nth-child(odd) {
+  background-color: var(--color-blue-second-20);
 }
 
 .advantages-item:first-child,
@@ -386,15 +396,6 @@ img {
   width: 1200px;
   background-color: var(--color-blue-basic);
   color: var(--color-white);
-}
-
-.advantages-item:nth-child(2),
-.advantages-item:nth-child(4) {
-  background-color: var(--color-blue-second-12);
-}
-
-.advantages-item:nth-child(3) {
-  background-color: var(--color-blue-second-20);
 }
 
 .advantages-text {
@@ -451,7 +452,6 @@ img {
 .recommendations-item {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   align-items: center;
   width: 400px;
   min-height: 385px;
@@ -800,12 +800,6 @@ img {
   align-items: center;
 }
 
-.tooltip {
-  width: 26px;
-  height: 26px;
-  margin-left: 10px;
-}
-
 .modal-input-guests {
   width: 110px;
   box-sizing: border-box;
@@ -885,6 +879,7 @@ img {
   position: relative;
   width: 26px;
   height: 26px;
+  margin-left: 10px;
 }
 
 .tooltip-toggle {
